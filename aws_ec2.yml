@@ -1,0 +1,12 @@
+---
+
+plugin: aws_ec2
+aws_access_key: AKIAW7AJOK7J3QIJLMCY
+aws_secret_key: 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
+regions: 
+  - ap-southeast-1
+
+
+keyed_groups:
+  - key: tags
+   
