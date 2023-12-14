@@ -2,8 +2,6 @@
 
 plugin: 
   - aws_ec2
-  - boto3
-  - botocore
 
 
 regions: 
