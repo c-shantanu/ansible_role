@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Deploy Role') {
       steps {
-        sh 'sudo apt-get install python-boto3 -S'
+        sh 'apt-get install python-boto3'
         sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook.yml'
       }
     }
