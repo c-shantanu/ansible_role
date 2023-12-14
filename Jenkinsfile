@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("SCM checkout") {
             steps {
-                git "https://github.com/c-shantanu/ansible_role.git"
+                git branch: 'main', url: "https://github.com/c-shantanu/ansible_role.git"
                 
             }
         }
