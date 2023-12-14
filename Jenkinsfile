@@ -14,6 +14,7 @@ pipeline {
         }
         stage('Grant Persmission') {
             steps {
+                sh 'chown jenkins:jenkins /var/lib/jenkins/workspace/tool_role/mykey.pem'
                 sh 'sudo chmod 400 /var/lib/jenkins/workspace/tool_role/mykey.pem'
             }
         }
