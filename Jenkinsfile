@@ -9,7 +9,7 @@ pipeline {
         }
         stage(" execute Ansible") {
            steps {
-                ansiblePlaybook credentialsId: 'mykey', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'aws_ec2.yml', playbook: 'playbook.yml'
+                sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook.yml'
             }    
         }    
     }
