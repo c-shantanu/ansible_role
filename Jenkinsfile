@@ -4,8 +4,13 @@ pipeline {
   stages {
     stage('Deploy Role') {
       steps {
-        sh 'apt-get install python-boto3'
-        sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook.yml'
+        script {
+          // Install boto3 using pip
+          sh 'pip install boto3'
+          
+          // Disable host key checking for Ansible
+          sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook playbook.yml'
+        }
       }
     }
   }
